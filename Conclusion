@@ -5,3 +5,5 @@ such as deadlock. For example, if there is a request pool. When the pool is full
 are no proper timeout strategy, dead lock happens.
 
 3. [1.txt] Use lazy loading to decide type at runtime. For example, in database, when we are using ORM and wanting to implement a self reference. Sometimes we need lazy loading to solve the problem. 
+
+4. Don't put complex operations into a static method or block. Try using singleton.
