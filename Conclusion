@@ -3,3 +3,5 @@
 2. Don't use REST request inside a request. Use inner service. Not only because the code style, but also it might cause severe problem
 such as deadlock. For example, if there is a request pool. When the pool is full, and one of the pool is sending a REST request and there
 are no proper timeout strategy, dead lock happens.
+
+3. [1.txt] Use lazy loading to decide type at runtime. For example, in database, when we are using ORM and wanting to implement a self reference. Sometimes we need lazy loading to solve the problem. 
