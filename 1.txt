@@ -1,0 +1,26 @@
+public abstract class asd<T extends asd<T>>{
+
+	asd<T> meta;
+	
+	//ConcurrentMemoizingValue is a lazy loading mechanism
+	final ConcurrentMemoizingValue<SFieldReference<T>> asd = new ConcurrentMemoizingValue<SFieldReference<T>>() {
+		@Override protected SFieldReference<T> make() {
+			return indexedReferenceField(meta, "published_version");
+		}
+	};
+
+	SFieldReference<T> getasd() { return asd.call(); }
+
+	protected asd(Class<T> userClass, String tableName, PublishableMeta<T> meta, MetaFlags... flags) {
+		super(userClass, tableName);
+		this.meta = meta;
+	}
+}
+******************************************************
+public class aa extends asd<Report> {
+	private aa() {
+		super(aaa.class, "tablename", aa.META);
+	}
+
+	public static final aa META = new aa();
+}
